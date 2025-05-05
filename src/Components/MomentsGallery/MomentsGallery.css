@@ -1,0 +1,236 @@
+.moments-container {
+    font-family: 'Arial', sans-serif;
+    background: #fff; 
+    color: #333;
+    padding: 1rem;
+  }
+  
+  .intro-section {
+    padding: 2rem;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap; /* Helps in responsiveness */
+  }
+  
+  .intro-content h2 {
+    flex: 1;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: left;
+  }
+  
+  .intro-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  .intro-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .intro-text button {
+    background-color: #d6402f;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  
+  .carousel-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .carousel-section h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .carousel-section h3::after {
+    content: '';
+    display: block;
+    margin: 8px auto 0;
+    width: 100px;
+    height: 5px;
+    /* background: url('https://i.imgur.com/lX5MSk2.png') no-repeat center; You can replace this with your SVG or border image */
+    background-size: contain;
+  }
+  
+  .carousel-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .carousel-images img {
+    width: 270px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-images img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Optional: navigation arrows (mock) */
+  .carousel-section::before,
+  .carousel-section::after {
+    content: '‹';
+    font-size: 40px;
+    color: #333;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .carousel-section::after {
+    content: '›';
+    right: 20px;
+  }
+  
+  .carousel-section::before {
+    left: 20px;
+  }
+  
+  
+  .gallery-grid-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .gallery-grid-section h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+ .description-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .description-section h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .description-section-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .description-section img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .description-section p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  
+  
+  .footer-gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .footer-gallery h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .footer-gallery h3::after {
+    content: '';
+    display: block;
+    margin: 8px auto 0;
+    width: 100px;
+    height: 5px;
+    background-size: contain;
+  }
+  
+  .gallery-years {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .year-tab {
+    font-size: 16px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .year-tab i {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .year-tab:hover {
+    transform: scale(1.05);
+  }
+  
