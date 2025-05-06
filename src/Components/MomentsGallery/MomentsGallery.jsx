@@ -1,12 +1,14 @@
 import React from 'react';
 import './MomentsGallery.css';
+import image1 from '../../assets/image1.png';
+import image2 from '../../assets/image2.png';
 
 const MomentsGallery = () => {
   return (
     <div className="moments-container">
       <section className="intro-section">
   <div className="intro-content">
-    <h2>Moments of Divinity</h2>
+  <h2>Moments of Divinity</h2>
     <div className="intro-text">
       <p>
         This is a collection of pictures from Gayatri Teertham Sri Ramakrishna Shanti Ashramam.
@@ -20,16 +22,21 @@ const MomentsGallery = () => {
 
 
       <section className="carousel-section">
-        <h3>Moments Captured</h3>
+       <div className="header-img-wrapper">
+           <img src={image1} alt="service-heading" className="header-img" />
+        </div>
         <div className="carousel-images">
-          <img src="src/assets/img1.png" alt="Moment 1" />
-          <img src="src/assets/img2.png" alt="Moment 2" />
-          <img src="src/assets/img3.png" alt="Moment 3" />
+        <img src="src/assets/img1.png" alt="Moment 1" class="hero-img-1" />
+        <img src="src/assets/img2.png" alt="Moment 2" class="hero-img-2" />
+        <img src="src/assets/img3.png" alt="Moment 3" class="hero-img-3" />
+
         </div>
       </section>
 
       <section className="gallery-grid-section">
-        <h3>Moments Captured</h3>
+       <div className="header-img-wrapper">
+           <img src={image1} alt="service-heading" className="header-img" />
+        </div>
         <div className="gallery-grid">
            <img src="src/assets/Gallery/gallery1.png" alt="Gallery 1" className="gallery-img img1" />
            <img src="src/assets/Gallery/gallery2.png" alt="Gallery 2" className="gallery-img img2" />
@@ -47,7 +54,9 @@ const MomentsGallery = () => {
 
 
       <section className="description-section">
-  <h3>Moments Captured</h3>
+      <div className="header-img-wrapper">
+           <img src={image1} alt="service-heading" className="header-img" />
+      </div>
   <div className="description-section-content">
     <img src="src/assets/img-highlight.png" alt="Highlight" />
     <p>
@@ -57,7 +66,9 @@ const MomentsGallery = () => {
 </section>
 
       <section className="footer-gallery">
-        <h3>Moments Moments</h3>
+      <div className="header-img-wrapper">
+           <img src={image2} alt="service-heading" className="header-img" />
+        </div>
         <div className="gallery-years">
           {['2022', '2023', '2024', '2025'].map(year => (
             <div className="year-tab" key={year}>

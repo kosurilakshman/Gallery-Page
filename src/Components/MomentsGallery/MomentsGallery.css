@@ -1,8 +1,36 @@
+:root {
+  /* Font Families */
+  --heading-font: "Montserrat";
+  --subheading-font: "Martel";
+  --paragraph-font: "Open Sans";
+
+  /* Navbar Colors */
+  --navbar-bg-gradient: linear-gradient(325.86deg, rgba(254, 186, 23, 0.96) 27.97%, rgba(254, 186, 23, 0.68) 64.64%);
+  --bottom-navbar-bg: rgba(255, 147, 31, 0.9);
+
+  /* Box Colors */
+  --primary-box-bg: #FFF3CA; /* 100% opacity */
+  --secondary-box-bg: rgba(246, 185, 38, 0.7); /* 70% opacity */
+
+  /* Footer Colors */
+  --footer-bg-color: rgba(183, 0, 0, 0.7); /* B70000 with 70% opacity */
+  --footer-bg-image-opacity: 0.2; /* 20% opacity */
+
+  /* Page Background */
+  --page-bg-color: #f5f5f5; /* 100% opacity */
+ 
+}
+
+
+
+
 .moments-container {
-    font-family: 'Arial', sans-serif;
-    background: #fff; 
+  
+    background: var(--page-bg-color);
     color: #333;
     padding: 1rem;
+    opacity: 100%;
+    font-family: var(--paragraph-font, "Open Sans", sans-serif); 
   }
   
   .intro-section {
@@ -10,6 +38,7 @@
     border-radius: 20px 20px 0 0;
     display: flex;
     justify-content: center;
+    /* background-color: var(--primary-box-bg); */
   }
   
   .intro-content {
@@ -27,6 +56,8 @@
     font-size: 2.5rem;
     color: #2c3e50;
     text-align: left;
+    font-family: var(--heading-font, "Montserra"); 
+  
   }
   
   .intro-text {
@@ -40,6 +71,7 @@
     margin-bottom: 1rem;
     color: #444;
     line-height: 1.6;
+    font-family: var(--paragraph-font, "Open Sans", sans-serif); 
   }
   
   .intro-text button {
@@ -50,33 +82,60 @@
     border-radius: 20px;
     cursor: pointer;
   }
+
+  .hero-img-1{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
+    transition: transform 0.3s ease;
+
+  }
+
+  .hero-img-2{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
+    transition: transform 0.3s ease;
+    margin-top: 50px;
+
+  }
+
+  .hero-img-3{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
+    transition: transform 0.3s ease;
+
+  }
+
+  /* section-2 */
   
   
   .carousel-section {
     text-align: center;
     padding: 50px 20px;
-    background-color: #fff;
+   
     position: relative;
   }
   
-  .carousel-section h3 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
+  .header-img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* optional spacing below */
   }
   
-  .carousel-section h3::after {
-    content: '';
-    display: block;
-    margin: 8px auto 0;
-    width: 100px;
-    height: 5px;
-    /* background: url('https://i.imgur.com/lX5MSk2.png') no-repeat center; You can replace this with your SVG or border image */
-    background-size: contain;
+  .header-img {
+    height: 70px;
+    width: auto;
   }
-  
+
   .carousel-images {
     display: flex;
     justify-content: center;
@@ -84,20 +143,7 @@
     margin-top: 30px;
   }
   
-  .carousel-images img {
-    width: 270px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 16px;
-    /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
-    transition: transform 0.3s ease;
-  }
-  
-  .carousel-images img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Optional: navigation arrows (mock) */
+   /* Optional: navigation arrows (mock) */
   .carousel-section::before,
   .carousel-section::after {
     content: '‹';
@@ -119,43 +165,66 @@
     left: 20px;
   }
   
+/*   Section-3 */
+
+.gallery-grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: url('../../assets/bg.png') center/cover no-repeat;
+  background-size: cover;  /* Ensures the image covers the entire section */
+  background-position: top; /* Optional: Adjusts the vertical position if needed */
   
-  .gallery-grid-section {
-    padding: 40px 20px;
-    text-align: center;
-  }
+}
+
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-left: 40px;
+ 
+}
+
+/* Base styling */
+.gallery-img {
+  border-radius: 10px;
+  display: block;
+ 
+  object-fit: contain;
   
-  .gallery-grid-section h3 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
+ 
+}
+
+/* Individual Dimensions (Width x Height) */
+.img1 { width: 200px; height: 250px; }
+.img2 { width: 200px; height: 250px; }
+.img3 { width: auto; height: 250px; }
+.img4 { width: 200px; height: 250px; }
+.img5 { width: auto; height: 250px; }
+.img6 { width: 200px; height: 250px; }
+.img7 { width: 200px; height: 250px; }
+.img8 { width: 200px; height: 250px; }
+.img9 { width: 200px; height: 250px; }
+.img10 { width: auto; height: 250px; }
+.img11 { width: auto; height: 250px; }
+
   
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .gallery-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
+
+/* Section-4 */
+
  .description-section {
-    display: flex;
+  
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-  }
+    gap: 80px;
+    margin-top: 10px;
   
-  .description-section h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
   }
+
   
   .description-section-content {
     display: flex;
@@ -166,28 +235,33 @@
     width: 100%;
     flex-wrap: wrap;
     text-align: left;
+    margin-left: 50px;
+   
   }
   
-  .description-section img {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  .description-section-content img {
+   
+    max-width: 300px;        /* But no more than 400px */
+    /* height: 250px;            Maintains aspect ratio */
+  
+
   }
   
   .description-section p {
+    font-family: var(--paragraph-font, "Open Sans", sans-serif); 
     max-width: 600px;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
+    margin-bottom: 6rem;
   }
-  
-  
-  
+
+
+/*   Section-5  */
   .footer-gallery {
     text-align: center;
     padding: 50px 20px;
-    background-color: #fff;
+   
   }
   
   .footer-gallery h3 {
@@ -227,7 +301,7 @@
   
   .year-tab i {
     font-size: 36px;
-    margin-bottom: 10px;
+    
   }
   
   .year-tab:hover {
