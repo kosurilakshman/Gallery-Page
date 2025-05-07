@@ -1,20 +1,23 @@
 import React from 'react';
-import Navbar from './Components/Navbar/Navbar';
-import MomentsGallery from './Components/MomentsGallery/MomentsGallery';
-import Footer from './Components/Footer/Footer';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import HeroSection from './Components/Herosection/HeroSection';
+import CarouselSection from './Components/CarouselSection/CarouselSection';
+import GridGallerySection from './Components/GridGallerySection/GridGallerySection';
+import DescriptionSection from './Components/DescriptionSection/DescriptionSection';
+import Gallery from './Components/Gallery/Gallery';
+import Footer from './components/Footer/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar/>
-      <MomentsGallery />
-      <Footer/>
-      
-      
-    </div>
-  );
-}
+const MomentsGallery = () => (
+  <div className="moments-container">
+    <Navbar/>
+    <HeroSection />
+    <CarouselSection />
+    <GridGallerySection />
+    <DescriptionSection />
+    <Gallery />
+    <Footer/>
+  </div>
+);
 
-
-export default App;
+export default MomentsGallery;

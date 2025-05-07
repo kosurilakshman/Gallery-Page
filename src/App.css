@@ -2,9 +2,15 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* prevents horizontal scrolling */
+  background: var(--page-bg-color);
+  color: #333;
+  font-family: var(--paragraph-font);
+  opacity: 1; /* Correct opacity value */
+  min-height: 100vh;
+  overflow-x: hidden;
+
 }
 

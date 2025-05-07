@@ -1,0 +1,71 @@
+/*   Section-3 */
+
+
+.header-img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* optional spacing below */
+  }
+  
+  .header-img {
+    height: 70px;
+    width: auto;
+  }
+
+.gallery-grid-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: hidden;
+   
+    
+  }
+  
+  
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-left: 40px;
+   
+  }
+  
+  /* Base styling */
+  .gallery-img {
+    border-radius: 10px;
+    display: block;
+    object-fit: contain;
+    overflow-x: hidden;
+    
+   
+  }
+  
+  /* Individual Dimensions (Width x Height) */
+  .img1 { width: 200px; height: 250px; }
+  .img2 { width: 200px; height: 250px; }
+  .img3 { width: auto; height: 250px; }
+  .img4 { width: 200px; height: 250px; }
+  .img5 { width: auto; height: 250px; }
+  .img6 { width: 200px; height: 250px; }
+  .img7 { width: 200px; height: 250px; }
+  .img8 { width: 200px; height: 250px; }
+  .img9 { width: 200px; height: 250px; }
+  .img10 { width: auto; height: 250px; }
+  .img11 { width: auto; height: 250px; }
+
+
+  @media (max-width: 480px) {
+    .gallery-grid-section {
+      margin-right: 50px;
+      align-items: center;
+    }
+    .header-img {
+        height: 50px;
+      }
+  }
+
+    
+  
+  
