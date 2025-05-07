@@ -149,3 +149,137 @@
     padding-bottom: 15px;
     opacity: 0.8;
   }
+
+  /* Responsiveness
+   */
+ 
+   /* ========== 320px - 480px ========== */
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 0 20px;
+    height: auto;
+  }
+ 
+  .footer-box-1 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+ 
+  .footer-heading {
+    font-size: 20px;
+  }
+ 
+  .footer-box1-col a {
+    font-size: 16px;
+  }
+ 
+  .footer-box-2 {
+    grid-template-columns: 1fr;
+  }
+ 
+  .footer-contact-heading {
+    font-size: 18px;
+  }
+ 
+  .footer-contact-para {
+    font-size: 16px;
+  }
+ 
+  .footer-copy {
+    font-size: 12px;
+  }
+ 
+  .social-icons a svg,
+  .footer-icons svg {
+    font-size: 28px;
+  }
+}
+ 
+ 
+/* ========== 481px - 768px ========== */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .footer {
+    padding: 0 30px;
+    height: auto;
+  }
+ 
+  .footer-box-1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+ 
+  .footer-heading {
+    font-size: 22px;
+  }
+ 
+  .footer-box1-col a {
+    font-size: 17px;
+  }
+ 
+  .footer-box-2 {
+    grid-template-columns: 1fr;
+  }
+ 
+  .footer-contact-heading {
+    font-size: 19px;
+  }
+ 
+  .footer-contact-para {
+    font-size: 17px;
+  }
+ 
+  .footer-copy {
+    font-size: 13px;
+  }
+}
+ 
+ 
+/* ========== 769px - 1024px ========== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 0 40px;
+    height: auto;
+  }
+ 
+  .footer-box-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+ 
+  .footer-box-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+ 
+/* ========== 1025px - 1280px ========== */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .footer {
+    padding: 0 50px;
+    height: 60vh;
+  }
+ 
+  .footer-box-1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+ 
+  .footer-box-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+ 
+/* ========== 1281px - 1440px ========== */
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  .footer {
+    padding: 0 60px;
+    height: 65vh;
+  }
+ 
+  .footer-box-1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+ 
+  .footer-box-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

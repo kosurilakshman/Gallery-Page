@@ -44,15 +44,15 @@
   .intro-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
     max-width: 1200px;
     width: 100%;
     flex-wrap: wrap; /* Helps in responsiveness */
-  }
+ 
+    }
+  
   
   .intro-content h2 {
-    flex: 1;
+    flex-basis: 40%;
     font-size: 2.5rem;
     color: #2c3e50;
     text-align: left;
@@ -61,9 +61,10 @@
   }
   
   .intro-text {
-    flex: 1;
+    flex-basis: 55%;
     text-align: left;
     max-width: 600px;
+    gap: 20px;
   }
   
   .intro-text p {
@@ -74,14 +75,23 @@
     font-family: var(--paragraph-font, "Open Sans", sans-serif); 
   }
   
-  .intro-text button {
+  .primary-btn {
     background-color: #d6402f;
     color: white;
     padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+
   }
+   
+  .button-container {
+  
+    justify-content: center; /* center horizontally */
+    width: 100%;
+    margin: 1rem 0;
+  }
+   
 
   .hero-img-1{
     width: 300px;
@@ -171,9 +181,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background: url('../../assets/bg.png') center/cover no-repeat;
-  background-size: cover;  /* Ensures the image covers the entire section */
-  background-position: top; /* Optional: Adjusts the vertical position if needed */
+  overflow-x: hidden;
+ 
   
 }
 
@@ -191,8 +200,8 @@
 .gallery-img {
   border-radius: 10px;
   display: block;
- 
   object-fit: contain;
+  overflow-x: hidden;
   
  
 }
@@ -222,6 +231,7 @@
     padding: 40px 20px;
     gap: 80px;
     margin-top: 10px;
+    overflow-x: hidden;
   
   }
 
@@ -306,5 +316,189 @@
   
   .year-tab:hover {
     transform: scale(1.05);
+  }
+
+
+  /* Responsiveness */
+
+  @media (max-width: 480px) {
+    .primary-btn {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+  
+    .carousel-section::before,
+    .carousel-section::after {
+      font-size: 30px;
+      top: 60%;
+    }
+
+    .gallery-grid-section{
+      margin-right:50px;
+      align-items: center;
+      
+    }
+  
+    .header-img {
+      height: 50px;
+      
+    }
+
+    .description-section-content img {
+      max-width: 150px;  /* Further reduce image size for mobile */
+      margin-right:100px; /* Keeps image aligned to the right */
+    }
+  
+    .description-section p {
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: left; /* Keeps paragraph text aligned left */
+      margin-right:60px;
+    }
+
+   
+  }
+/* 
+  media (max-width: 768px) */
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 1rem;
+    }
+  
+    .intro-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .intro-text p {
+      font-size: 0.95rem;
+    }
+  
+    .carousel-images {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .gallery-grid-section {
+      margin-right: 25px;
+      align-items: center;
+    }
+  
+    .gallery-img {
+      width: 100% !important;
+      height: auto !important;
+      
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+    
+      .gallery-img {
+        width: calc(50% - 20px); /* 2 images per row */
+        height: auto;
+        object-fit: cover;
+      }
+    
+      .gallery-grid-section {
+        margin-right: 0;
+        align-items: center;
+        padding: 10px;
+      }
+    }
+    
+
+    .image{
+      margin-right:100px;
+    }
+  
+    .gallery-grid {
+      gap: 10px;
+    }
+  
+    .year-tab i {
+      font-size: 28px;
+    }
+  
+    .footer-gallery h3 {
+      font-size: 20px;
+    }
+  }
+
+  /* @media (min-width: 769px) and (max-width: 1024px) */
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .primary-btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 16px;
+    }
+  
+    .carousel-section::before,
+    .carousel-section::after {
+      font-size: 40px;
+      top: 55%;
+    }
+  
+
+  
+  
+    .header-img {
+      height: 80px;
+    }
+  
+    .description-section-content img {
+      max-width: 200px;
+      margin-right: 20px;
+    }
+  
+    .description-section p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-right: 20px;
+    }
+  
+    .intro-section {
+      padding: 2rem;
+    }
+  
+    .intro-content h2 {
+      font-size: 2.2rem;
+    }
+  
+    .intro-text p {
+      font-size: 1rem;
+    }
+  
+    .carousel-images {
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+    }
+  
+    .gallery-img {
+      width: 80%;
+      height: auto;
+    }
+  
+    .image {
+      margin-right: 20px;
+    }
+  
+    .gallery-grid {
+      gap: 20px;
+    }
+  
+    .year-tab i {
+      font-size: 32px;
+    }
+  
+    .footer-gallery h3 {
+      font-size: 22px;
+    }
   }
   
